@@ -1,7 +1,7 @@
 
 import { useRef, useEffect } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
-import { PerspectiveCamera, Environment, useTexture } from "@react-three/drei";
+import { PerspectiveCamera, Environment } from "@react-three/drei";
 import * as THREE from "three";
 
 // Constants from the original game
@@ -229,7 +229,7 @@ const PongGame = ({ controlsRef, onScore, isPaused, isSinglePlayer }: PongGamePr
       
       {/* Lighting */}
       <ambientLight intensity={0.4} />
-      <pointLight position={[0, 5, 5]} intensity={0.6} color="#ffffff" />
+      <pointLight position={[0, 5, 5]} intensity={0.6} />
       <pointLight position={[0, -5, 5]} intensity={0.6} color="#00f3ff" />
       <spotLight position={[0, 0, 8]} angle={Math.PI / 6} penumbra={1} intensity={1.5} castShadow />
       
